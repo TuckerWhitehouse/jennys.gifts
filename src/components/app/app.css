@@ -1,0 +1,12 @@
+.app {
+  height: 100%;
+  background-position: bottom center;
+  background-repeat: repeat-x;
+
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.app.ready {
+  opacity: 1;
+}

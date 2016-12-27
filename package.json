@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "homepage": "https://jennys.gifts",
   "devDependencies": {
+    "eslint": "^3.12.2",
     "gh-pages": "^0.12.0",
     "react-scripts": "0.8.4"
   },
@@ -13,8 +14,21 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "lint": "eslint . --fix --max-warnings 10 --ignore-path .gitignore",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "rules": {
+      "semi": [
+        "error",
+        "never"
+      ],
+      "no-var": "error",
+      "prefer-const": "error",
+      "prefer-arrow-callback": "error"
+    }
   }
 }

@@ -1,0 +1,93 @@
+.present {
+  /*left: 50%;*/
+  /*bottom: 40px;*/
+  margin: 80px;
+  width: 300px;
+  height: 220px;
+
+  width: 150px;
+  height: 110px;
+  position: relative;
+  /*position: absolute;
+  transform: translateX(-50%);*/
+}
+
+.top,
+.box {
+  position: absolute;
+  background-color: #34495e;
+}
+
+.top::before,
+.top::after,
+.box::before,
+.box::after {
+  top: 0;
+  content: '';
+  position: absolute;
+}
+
+.top::before,
+.box::before {
+  left: 50%;
+  /*width: 50px;*/
+  width: 25px;
+  height: 100%;
+  background-color: #fdc56d;
+  transform: translateX(-50%);
+}
+
+.top {
+  width: 100%;
+  height: 25%;
+  z-index: 1;
+  box-shadow: 2px 2px 16px rgba(0,0,0,0.5);
+}
+
+.top .bow {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+
+  width: 30px;
+  height: 30px;
+  bottom: 100%;
+  left: 50%;
+  /*margin-left: -30px;*/
+  transform: translateX(-50%);
+}
+
+.top .bow::before,
+.top .bow::after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background: transparent;
+  border-radius: 30px;
+  /*box-shadow: inset 0 0 0 14px #fdc56d;*/
+  box-shadow: inset 0 0 0 7px #fdc56d;
+}
+
+.top .bow::before {
+  transform: translateX(-45%) skewY(40deg);
+}
+.top .bow::after {
+  transform: translateX(45%) skewY(-40deg);
+}
+
+.box {
+  left: 5%;
+  right: 5%;
+  bottom: 0;
+  height: 80%;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.25);
+}
+
+.box::after {
+  left: 0;
+  width: 100%;
+  height: 30px;
+  /*background-color: rgba(0,0,0,0.1);*/
+  background-color: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0));
+}
